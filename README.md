@@ -31,10 +31,16 @@ We started with ARIMA because it's a classic baseline model for time series fore
 
 ARIMA has 3 variables:
 1) AR (Auto-Regressive): uses past values as inputs in regression
-
 2) I (Integrated): the data is stationary
-
 3) MA (Moving Average): uses past errors as inputs in regression
 
-Before fitting the model, we prepared subway's data by splitting into training and testing. 
+Before fitting the model, we prepared subway's data by splitting into training and testing. And then,
+from statsmodels.tsa.stattools import adfuller
+
+#Runs Adf test
+result = adfuller(train['Subway']) 
+
+print('ADF Statistic:', result[0])
+print('p-value:', result[1])
+
 
