@@ -1,7 +1,6 @@
 # MTA Ridership Analysis
 ## Introduction
-For this project, we used the MTA daily ridership from 2020-2025 (https://catalog.data.gov/dataset/mta-daily-ridership-data-beginning-2020). Using ARIMA or Prophet model, we were be able to predict the ridership on specific days, and also analyze the recovery rate of each transportation mode after COVID-19 lockdown. Then, we forecasted an expected date range when each mode is expected to return to its pre-lockdown ridership levels.
-
+For this project, we used the MTA daily ridership from 2020-2025 (https://catalog.data.gov/dataset/mta-daily-ridership-data-beginning-2020). Using ARIMA or Prophet model, we were be able to predict the ridership on specific days, and also analyze the recovery rate of each transportation mode after COVID-19 lockdown. Then, we predicted the maximum recovery rate over the next 10 years.
 
 ## MTA Daily Ridership Data: 2020 - 2025
 ![MTA Ridership Overview](visualizations/all_data.png)
