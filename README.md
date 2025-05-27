@@ -5,7 +5,7 @@ For this project, we used the MTA daily ridership from 2020-2025 (https://catalo
 ## MTA Daily Ridership Data: 2020 - 2025
 ![MTA Ridership Overview](visualizations/all_data.png)
 
-As we can see in the graph, there is a huge drop in ridership around the beginning of 2020. If we follow the trend of each transportation mode, we can notice that the ridership gradually increases. The growth are noticable for all mode except Staten Island Railway due to higher volume of riderships of the other tranportations. Nevertheless, we included all modes in our analysis.
+As we can see in the graph, there is a huge drop in ridership around the beginning of 2020. If we follow the trend of each transportation mode, we notice that the ridership gradually increases. The growth are noticable for all mode except Staten Island Railway due to higher volume of riderships of the other tranportations. Nevertheless, we included all modes in our analysis.
 
 
 ## MTA Subway Ridership
