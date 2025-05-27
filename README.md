@@ -26,8 +26,6 @@ As we can see in the graph, there is a huge drop in ridership around the beginni
 
 The MTA Subway has the largest ridership among all the transporation mode in NYC. Given the large data, we applied both ARIMA and Prophet models. ARIMA served as our initial learning model to forecasting while Prophet offered tools for visualizing trends and seasonality.
 
-## Modeling Approach
-
 ### ARIMA
 We started with ARIMA because it's a classic baseline model for time series forecasting. This model is design to work for single variable time series data and capture trend and seasonality with differencing.
 
