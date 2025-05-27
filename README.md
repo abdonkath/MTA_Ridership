@@ -37,10 +37,13 @@ ARIMA has 3 variables:
 Before fitting the model, we prepared subway's data by splitting into training and testing. And then,
 from statsmodels.tsa.stattools import adfuller
 
-#Runs Adf test
-result = adfuller(train['Subway']) 
+```python
+from statsmodels.tsa.stattools import adfuller
+
+Run ADF test
+result = adfuller(train['Subway'])
 
 print('ADF Statistic:', result[0])
 print('p-value:', result[1])
-
+```
 
