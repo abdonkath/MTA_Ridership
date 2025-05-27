@@ -35,8 +35,7 @@ ARIMA has 3 variables:
 3) MA (Moving Average): uses past errors as inputs in regression
 
 Before fitting the model, we prepared subway's data by splitting into training and testing. And then,
-from statsmodels.tsa.stattools import adfuller
-
+we run an ADF test to determine if the data is stationary or not.
 ```python
 from statsmodels.tsa.stattools import adfuller
 
