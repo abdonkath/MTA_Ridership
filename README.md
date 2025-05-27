@@ -16,6 +16,4 @@ The MTA Subway has the largest ridership among all the transporation mode in NYC
 ## Modeling Approach
 
 ### ARIMA
-We used ARIMA because ...
-
-split data/ train and tes
+(In Progress)
