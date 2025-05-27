@@ -16,4 +16,12 @@ The MTA Subway has the largest ridership among all the transporation mode in NYC
 ## Modeling Approach
 
 ### ARIMA
-(In Progress)
+We started with ARIMA because it's a classic baseline model for time series forecasting. This model is design to work for single variable time series data and capture trend and seasonality with differencing.
+
+ARIMA has 3 variables:
+1) AR (Auto-Regressive): uses past values as inputs in regression
+
+2) I (Integrated): the data is stationary
+
+3) MA (Moving Average): uses past errors as inputs in regression
+
