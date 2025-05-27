@@ -2,6 +2,19 @@
 ## Introduction
 For this project, we used the MTA daily ridership from 2020-2025 (https://catalog.data.gov/dataset/mta-daily-ridership-data-beginning-2020). Using ARIMA or Prophet model, we were be able to predict the ridership on specific days, and also analyze the recovery rate of each transportation mode after COVID-19 lockdown. Then, we predicted the maximum recovery rate over the next 10 years.
 
+## The Dataset
+Source: https://catalog.data.gov/dataset/mta-daily-ridership-data-beginning-2020
+
+Timeframe: 2020 - 2025
+
+Columns Used:
+- Date
+- Subways: Total Estimated Ridership
+- Buses: Total Estimated Ridership
+- LIRR: Total Estimated Ridership
+- Metro-North: Total Estimated Ridership
+- Staten Island Railway: Total Estimated Ridership
+
 ## MTA Daily Ridership Data: 2020 - 2025
 ![MTA Ridership Overview](visualizations/all_data.png)
 
@@ -24,4 +37,6 @@ ARIMA has 3 variables:
 2) I (Integrated): the data is stationary
 
 3) MA (Moving Average): uses past errors as inputs in regression
+
+Before fitting the model, we prepared subway's data by splitting into training and testing. 
 
