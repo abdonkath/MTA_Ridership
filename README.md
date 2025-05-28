@@ -69,3 +69,5 @@ We see that the prediction line is linear despite the up and down peaks cause by
 We decided to try another parameter, ARIMA(7,2,7), to see if it could better capture weekly trends and seasonality, especially the consistent ridership dips during weekends. By increasing the lag terms, we aimed to incorporate the repeating 7-day cycle into the model.
 
 ![MTA Subway ARIMA 727 Prediction](visualizations/arima727.png)
+
+We see that this model capture the peaks and the dips in ridership unlike the first ARIMA model. The calculated MAPE is 16.33%. This is an improvement compare to the first ARIMA model. However, as we look closer to the graph, we observe that the predicted peaks are remaining relatively flat while the dips are growing deeper each weekend. This suggest that while the model picks up on weekly seasonality, it struggles adapt to how much it ridership rises and falls.
