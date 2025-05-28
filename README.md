@@ -50,7 +50,7 @@ The result was:
 ADF Statistic: -2.014709719230118
 p-value: 0.28016087630726183
 
-The p-value is larger than 0.05 so the data is currently not stationary. Therefore, we continued to difference again, and we got a result of p-value less than 0.05. Since we used differencing twice, our I (Integrated) = 2. We used this to make the model.
+The p-value is larger than 0.05 so the data is currently not stationary. Therefore, we continued to difference again, and we got a result of p-value less than 0.05. Since we used differencing twice, our I (Integrated) is equal to 2. We used this value to make the model.
 ```python
 #Make the Model
 from statsmodels.tsa.arima.model import ARIMA
@@ -61,4 +61,5 @@ model_fit = model.fit()
 print(model_fit.summary())
 ```
 We used the parameters ARIMA(1,2,1) as a baseline model to understand how well a simple ARIMA setup could forecast ridership before tuning or switching models. And, then we forecasted future dates of the training data and compare the prediction to actual rideship in the test data.
+
 ![MTA Subway ARIMA Prediction](visualizations/arima121.png)
