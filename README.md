@@ -64,7 +64,7 @@ We used the parameters ARIMA(1,2,1) as a baseline model to understand how well a
 
 ![MTA Subway ARIMA 121 Prediction](visualizations/arima121.png)
 
-We see that the prediction line is linear despite the up and down peaks cause by weekend dips in ridership in the actual data. This suggest that ARIMA(1,2,1) model struggles to fully capture the weekly seasonality. We calculated the MAPE (Mean Absolute Percentage Error) and it resulted to 20.80%. As a general rule of thumb, the lower the MAPE is, the more accurate the model. Values under 10% considered highly accurate, 10–20% reasonable, and anything above 20% should be improve.
+We see that the prediction line is linear despite the up and down peaks cause by weekend dips in ridership in the actual data. This suggest that ARIMA(1,2,1) model struggles to fully capture the weekly seasonality. For evaluation, we picked a random date in the testing dataset (June 6, 2024) and predicted the ridership for that day. The result was 3,411,754. However, the actual subway ridership was 1,908,786. There was a huge difference between the two model and was reflected in the MAPE (Mean Absolute Percentage Error), which resulted to 20.80%. As a general rule of thumb, the lower the MAPE is, the more accurate the model. Values under 10% considered highly accurate, 10–20% reasonable, and anything above 20% should be improve.
 
 We decided to try another parameter, ARIMA(7,2,7), to see if it could better capture weekly trends and seasonality, especially the consistent ridership dips during weekends. By increasing the lag terms, we aimed to incorporate the repeating 7-day cycle into the model.
 
