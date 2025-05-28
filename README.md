@@ -47,8 +47,8 @@ print('p-value:', result[1])
 ```
 
 The result was:
-ADF Statistic: -2.014709719230118
-p-value: 0.28016087630726183
+- ADF Statistic: -2.014709719230118
+- p-value: 0.28016087630726183
 
 The p-value is larger than 0.05 so the data is currently not stationary. Therefore, we continued to difference again, and we got a result of p-value less than 0.05. Since we used differencing twice, our I (Integrated) is equal to 2. We used this value to make the model.
 ```python
