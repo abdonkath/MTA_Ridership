@@ -34,8 +34,8 @@ ARIMA has 3 variables:
 2) I (Integrated): the data is stationary
 3) MA (Moving Average): uses past errors as inputs in regression
 
-Before fitting the model, we prepared subway's data by splitting into training and testing date sets. And then,
-we run an ADF test to determine if the data is stationary or not.
+Before fitting the model, we prepared subway's data by splitting into training and testing data sets. And then,
+we run an ADF test in training data to determine if the data is stationary or not.
 ```python
 from statsmodels.tsa.stattools import adfuller
 
@@ -50,7 +50,7 @@ The result was:
 - ADF Statistic: -2.014709719230118
 - p-value: 0.28016087630726183
 
-The p-value is larger than 0.05. This meant the data was not currently stationary. Therefore, we applied differencing again, and we got a result of p-value less than 0.05. Since we used differencing twice, our I (Integrated) is equal to 2. This value was used to make the model.
+The p-value is larger than 0.05. This meant the data was not currently stationary. Therefore, we applied differencing again, and we got a result of p-value less than 0.05. Since we differenced twice, our I (Integrated) is equal to 2. This value was used to make the model.
 ```python
 #Make the Model
 from statsmodels.tsa.arima.model import ARIMA
@@ -70,4 +70,6 @@ We decided to try another parameter, ARIMA(7,2,7), to see if it could better cap
 
 ![MTA Subway ARIMA 727 Prediction](visualizations/arima727.png)
 
-We see that this model capture the peaks and the dips in ridership unlike the first ARIMA model. The calculated MAPE is 16.33%. This is an improvement compare to the first ARIMA model. However, as we look closer to the graph, we observe that the predicted peaks are remaining relatively flat while the dips are growing deeper each weekend. This suggest that while the model picks up on weekly seasonality, it has issue adapting how much the ridership rises and falls.
+We see that this model capture the peaks and the dips in ridership unlike the first ARIMA model. The predicted ridership on June 6, 2024 is 1,986,790, which is a lot closer to the actual value. And, the calculated MAPE is 16.33%. These are an improvement compare to the first ARIMA model. However, as we look closer to the graph, we observe that the predicted peaks are remaining relatively flat while the dips are growing deeper each weekend. This suggest that while the model picks up on weekly seasonality, it has issue adapting how much the ridership rises and falls.
+
+(In progress ...)
