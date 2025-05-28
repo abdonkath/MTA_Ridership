@@ -60,6 +60,12 @@ model_fit = model.fit()
 
 print(model_fit.summary())
 ```
-We used the parameters ARIMA(1,2,1) as a baseline model to understand how well a simple ARIMA setup could forecast ridership before tuning or switching models. And, then we forecasted future dates of the training data and compare the prediction to actual rideship in the test data.
+We used the parameters ARIMA(1,2,1) as a baseline model to understand how well a simple ARIMA setup could forecast ridership before tuning or switching models. And, then we forecasted future dates of the training data and compared the prediction to actual rideship in the test data.
 
-![MTA Subway ARIMA Prediction](visualizations/arima121.png)
+![MTA Subway ARIMA 121 Prediction](visualizations/arima121.png)
+
+We see that the prediction line is linear despite the up and down peaks cause by weekend dips in ridership in the actual data. This suggest that ARIMA(1,2,1) model struggles to fully capture the weekly seasonality. We calculated the MAPE (Mean Absolute Percentage Error) and it resulted to 20.80%. As a general rule of thumb, the lower the MAPE is, the more accurate the model. Values under 10% considered highly accurate, 10–20% reasonable, and anything above 20% should be improve.
+
+We decided to try another parameter, ARIMA(7,2,7), to see if it could better capture weekly trends and seasonality, especially the consistent ridership dips during weekends. By increasing the lag terms, we aimed to incorporate the repeating 7-day cycle into the model.
+
+![MTA Subway ARIMA 727 Prediction](visualizations/arima727.png)
