@@ -80,3 +80,5 @@ To address this, we used a model called Prophet. It is developed by Meta designe
 | Independence Day | 3,436,556   | 2,953,830 | 1,992,244          |
 | Veteran's day    | 2,549,972   | 3,246,661 | 3,277,617          |
 
+Based on the table above, Prophet's results are closer to the actual ridership during major U.S Holidays. Therefore, we used this model for the remaining analysis, especially to study how rideship patterns were affected during and after the COVID-19 lockdown period.
+
