@@ -72,6 +72,11 @@ We decided to try another parameter, ARIMA(7,2,7), to see if it could better cap
 
 We see that this model capture the peaks and the dips in ridership unlike the first ARIMA model. The predicted ridership on June 6, 2024 is 1,986,790, which is a lot closer to the actual value and the calculated MAPE is 16.33%. These are an improvement compare to the first ARIMA model. However, as we look closer to the graph, we observe that the predicted peaks are remaining relatively flat while the dips are growing deeper each weekend. This suggest that while the model picks up on weekly seasonality, it has issue adapting how much the ridership rises and falls.
 
-To address this, we used a model called Prophet. It is developed by Meta designed to handle seasonality and holidays effects more efficiently. Unlike ARIMA, Prophet requires minimal manual tuning. We also added U.S holidays to see if ridership patterns changed around those dates.
+To address this, we used a model called Prophet. It is developed by Meta designed to handle seasonality and holidays effects more efficiently. Unlike ARIMA, Prophet requires minimal manual tuning. We also added U.S holidays to see if ridership patterns changed around those dates. We chose random holidays to test the accuracy of each model.
 
-christmas, july4, veterans day
+| Holiday (2024)   | ARIMA 727   | Prophet   | Actual Ridership   |
+|:-----------------|:------------|:----------|:-------------------|
+| Christmas        | 3,241,657   | 2,214,380 | 1,378,374          |
+| Independence Day | 3,436,556   | 2,953,830 | 1,992,244          |
+| Veteran's day    | 2,549,972   | 3,246,661 | 3,277,617          |
+
