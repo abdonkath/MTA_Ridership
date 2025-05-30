@@ -72,8 +72,12 @@ We decided to try another parameter, ARIMA(7,2,7), to see if it could better cap
 
 We see that this model capture the peaks and the dips in ridership unlike the first ARIMA model. The predicted ridership on June 6, 2024 is 1,986,790, which is a lot closer to the actual value and the calculated MAPE is 16.33%. These are an improvement compare to the first ARIMA model. However, as we look closer to the graph, we observe that the predicted peaks are remaining relatively flat while the dips are growing deeper each weekend. This suggest that while the model picks up on weekly seasonality, it has issue adapting how much the ridership rises and falls.
 
-To address this, we used a model called Prophet. It is developed by Meta designed to handle seasonality and holidays effects more efficiently. Unlike ARIMA, Prophet requires minimal manual tuning. We also added U.S holidays to see if ridership patterns changed around those dates. We chose random holidays to test the accuracy of each model.
+To address this, we used a model called Prophet. It is developed by Meta designed to handle seasonality and holidays effects more efficiently. Unlike ARIMA, Prophet requires minimal manual tuning. 
 ![MTA Subway Prophet Prediction](visualizations/sub_prophet.png)
+
+Comparing to the previous graphs, this model follows the trend of the actual ridership more accurately, including the steady drop during summer and rebound in the fall. It also captures weekly seasonality better than ARIMA but it still quite underestimate the peaks.
+
+We also added U.S holidays to see if ridership patterns changed around those dates. We chose random holidays to test the accuracy of each model.
 
 | Holiday (2024)   | ARIMA 727   | Prophet   | Actual Ridership   |
 |:-----------------|:------------|:----------|:-------------------|
