@@ -76,7 +76,7 @@ To address this, we used a model called Prophet. It is developed by Meta designe
 
 ![MTA Subway Prophet Prediction](visualizations/sub_prophet.png)
 
-Comparing to the previous graphs, this model follows the trend of the actual ridership more precisely, including the steady drop during summer and rebound in the fall. It also captures weekly seasonality better than ARIMA but it still quite underestimate the peaks. The MAPE for the model is 9.14%, which is more accurate than the previous models.
+Comparing to the previous graphs, this model follows the trend of the actual ridership more precisely, including the steady drop during summer and rebound in the fall. It also captures weekly seasonality better than ARIMA but it still quite underestimate the peaks. 
 
 We also added U.S holidays to see if ridership patterns changed around those dates. We chose random holidays to test the accuracy of each model.
 
@@ -86,5 +86,5 @@ We also added U.S holidays to see if ridership patterns changed around those dat
 | Independence Day | 3,436,556   | 2,953,830 | 1,992,244          |
 | Veteran's day    | 2,549,972   | 3,246,661 | 3,277,617          |
 
-Based on the table above, Prophet's results are closer to the actual ridership during major U.S Holidays. Therefore, we used this model for the remaining analysis to study how rideship patterns were affected during and after the COVID-19 lockdown period.
+Based on the table above, Prophet's results are closer to the actual ridership during major U.S Holidays. The MAPE result is 9.14%, which is more accurate than the previous models. Therefore, we used this model for the remaining analysis to study how rideship patterns were affected during and after the COVID-19 lockdown period.
 
