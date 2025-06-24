@@ -64,13 +64,13 @@ We used the parameters ARIMA(1,2,1) as a baseline model to understand how well a
 
 ![MTA Subway ARIMA 121 Prediction](visualizations/arima121.png)
 
-We see that the prediction line is linear despite the up and down peaks cause by weekend dips in ridership in the actual data. This suggest that ARIMA(1,2,1) model struggles to fully capture the weekly seasonality. For evaluation, we picked a random date in the testing dataset (June 6, 2024) and predicted the ridership for that day. The result was 3,411,754. However, the actual subway ridership was 1,908,786. There was a huge difference between the two model and was reflected in the MAPE (Mean Absolute Percentage Error), which resulted to 20.80%. As a general rule of thumb, the lower the MAPE is, the more accurate the model. Values under 10% considered highly accurate, 10–20% reasonable, and anything above 20% should be improve.
+We see that the prediction line is linear despite the up and down peaks cause by weekend dips in ridership in the actual data. This suggest that ARIMA(1,2,1) model struggles to fully capture the weekly seasonality. For evaluation, we picked a random date in the testing dataset (June 6, 2024) and predicted the ridership for that day. The result was 3,411,754. However, the actual subway ridership was 1,908,786. There was a huge difference between the two model and was reflected in the MAPE (Mean Absolute Percentage Error), which resulted to 26.57%. As a general rule of thumb, the lower the MAPE is, the more accurate the model. Values under 10% considered highly accurate, 10–20% reasonable, and anything above 20% should be improve.
 
 We decided to try another parameter, ARIMA(7,2,7), to see if it could better capture weekly trends and seasonality, especially the consistent ridership dips during weekends. By increasing the lag terms, we aimed to incorporate the repeating 7-day cycle into the model.
 
 ![MTA Subway ARIMA 727 Prediction](visualizations/arima727.png)
 
-We see that this model capture the peaks and the dips in ridership unlike the first ARIMA model. The predicted ridership on June 6, 2024 is 1,986,790, which is a lot closer to the actual value and the calculated MAPE is 16.33%. These are an improvement compare to the first ARIMA model. However, as we look closer to the graph, we observe that the predicted peaks are remaining relatively flat while the dips are growing deeper each weekend. This suggest that while the model picks up on weekly seasonality, it has issue adapting how much the ridership rises and falls.
+We see that this model capture the peaks and the dips in ridership unlike the first ARIMA model. The predicted ridership on June 6, 2024 is 1,986,790, which is a lot closer to the actual value and the calculated MAPE is 15.78%. These are an improvement compare to the first ARIMA model. However, as we look closer to the graph, we observe that the predicted peaks are remaining relatively flat while the dips are growing deeper each weekend. This suggest that while the model picks up on weekly seasonality, it has issue adapting how much the ridership rises and falls.
 
 To address this, we used a model called Prophet. It is developed by Meta designed to handle seasonality and holidays effects more efficiently. Unlike ARIMA, Prophet requires minimal manual tuning.
 
@@ -86,5 +86,5 @@ We also added U.S holidays to see if ridership patterns changed around those dat
 | Independence Day | 3,436,556   | 2,953,830 | 1,992,244          |
 | Veteran's day    | 2,549,972   | 3,246,661 | 3,277,617          |
 
-Based on the table above, Prophet's results are closer to the actual ridership during major U.S Holidays. The MAPE result is 9.14%, which is more accurate than the previous models. Therefore, we used this model for the remaining analysis to study how rideship patterns were affected during and after the COVID-19 lockdown period.
+Based on the table above, Prophet's results are closer to the actual ridership during major U.S Holidays. The MAPE result is 9.78%, which is more accurate than the previous models. Therefore, we used this model for the remaining analysis to study how rideship patterns were affected during and after the COVID-19 lockdown period.
 
