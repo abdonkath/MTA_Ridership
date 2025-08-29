@@ -88,3 +88,12 @@ We also added U.S holidays to see if ridership patterns changed around those dat
 
 Based on the table above, Prophet's results are closer to the actual ridership during major U.S Holidays. The MAPE result is 9.78%, which is more accurate than the previous models. Therefore, we used this model for the remaining analysis to study how rideship patterns were affected during and after the COVID-19 lockdown period.
 
+### MTA Ridership Recovery Summary
+
+|                              | Subway    | Bus       | LIRR    | Metro-North   | Staten Island   |
+|:-----------------------------|:----------|:----------|:--------|:--------------|:----------------|
+| Pre-COVID 7-day (Avg)        | 4,574,761 | 1,880,013 | 248,939 | 156,449       | 12,614          |
+| Lowest 7-day (Avg)           | 353,271   | 12,814    | 6,672   | 7,667         | 595             |
+| Ridership Drop Rate %        | 92.3%     | 99.3%     | 97.3%   | 95.1%         | 95.3%           |
+| Latest 7-day Ridership (Avg) | 2,823,710 | 963,512   | 158,824 | 143,322       | 4,517           |
+| Latest-Recovery Rate %       | 58.5%     | 50.9%     | 62.8%   | 91.2%         | 32.6%           |
